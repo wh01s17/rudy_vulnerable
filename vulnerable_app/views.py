@@ -13,11 +13,6 @@ def vulnerable_form(request):
         # Process the form data (inefficiently to increase vulnerability)
         large_data = request.POST.get('large_field', '')
         
-        # Simulate processing time that increases with data size
-        # This makes the vulnerability more pronounced
-        processing_time = min(len(large_data) / 1000000, 10)  # Cap at 10 seconds
-        time.sleep(processing_time)
-        
         # Store data in memory (another resource consumption vector)
         processed_data = large_data.upper()
         
