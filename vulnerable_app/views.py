@@ -1,3 +1,5 @@
+# This view is intentionally vulnerable to R.U.D.Y. attacks
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -6,7 +8,6 @@ import time
 def home(request):
     return render(request, 'home.html')
 
-# This view is intentionally vulnerable to R.U.D.Y. attacks
 @csrf_exempt
 def vulnerable_form(request):
     if request.method == 'POST':

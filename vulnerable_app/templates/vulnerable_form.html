@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Vulnerable Form - R.U.D.Y. Target</title>
 </head>
+
 <body>
     <h2>R.U.D.Y. Vulnerable Form</h2>
     <p>This form is intentionally vulnerable to R.U.D.Y. attacks for educational purposes.</p>
-    
+
     <form method="post" action="{% url 'vulnerable_form' %}">
         {% csrf_token %}
         <label for="large_field">Large Text Field:</label><br>
-        <textarea id="large_field" name="large_field" rows="20" cols="100" 
-                  placeholder="Enter large amounts of text here to demonstrate R.U.D.Y. vulnerability..."></textarea><br><br>
-        
+        <textarea id="large_field" name="large_field" rows="20" cols="100"
+            placeholder="Enter large amounts of text here to demonstrate R.U.D.Y. vulnerability..."></textarea><br><br>
+
         <input type="submit" value="Submit">
     </form>
-    
+
     <hr>
     <p><a href="/">Back to Home</a></p>
 </body>
+
 </html>

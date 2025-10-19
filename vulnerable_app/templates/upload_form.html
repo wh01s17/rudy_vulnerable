@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Upload Endpoint - R.U.D.Y. Target</title>
 </head>
+
 <body>
     <h2>Vulnerable Upload Form</h2>
     <p>This endpoint is intentionally vulnerable to R.U.D.Y. attacks for educational purposes.</p>
-    
+
     <form method="post" action="{% url 'upload_endpoint' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <label for="file_upload">Large File Upload:</label><br>
         <input type="file" id="file_upload" name="file_upload"><br><br>
-        
+
         <input type="submit" value="Upload">
     </form>
-    
+
     <hr>
     <p><a href="/">Back to Home</a></p>
 </body>
+
 </html>

