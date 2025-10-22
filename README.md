@@ -1,7 +1,8 @@
 # R.U.D.Y. Vulnerable Django App
 
 > **⚠️ ¡ESTE PROYECTO ES INTENCIONALMENTE INSEGURO!**  
-> Esta aplicación es **solamente** para fines educativos, pruebas en entornos controlados y con autorización explícita. No uses este proyecto contra sistemas que no sean de tu propiedad o sin permiso expreso. **El autor no se hace responsable del uso indebido**.
+> Esta aplicación es **solamente** para fines educativos, pruebas en entornos controlados y con autorización explícita. No uses este proyecto contra sistemas que no sean de tu propiedad o sin permiso expreso. 
+**El autor no se hace responsable del uso indebido**.
 
 ---
 
