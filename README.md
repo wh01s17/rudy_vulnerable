@@ -1,7 +1,7 @@
 # R.U.D.Y. Vulnerable Django App
 
 > **⚠️ ¡ESTE PROYECTO ES INTENCIONALMENTE INSEGURO!**  
-> Esta aplicación es **solamente** para fines educativos y de pruebas en entornos controlados y con autorización explícita. No uses este proyecto contra sistemas que no sean de tu propiedad o sin permiso expreso. El autor no se hace responsable del uso indebido.
+> Esta aplicación es **solamente** para fines educativos, pruebas en entornos controlados y con autorización explícita. No uses este proyecto contra sistemas que no sean de tu propiedad o sin permiso expreso. **El autor no se hace responsable del uso indebido**.
 
 ---
 
@@ -12,14 +12,12 @@ El repositorio contiene:
 - Una aplicación vulnerable con endpoints para `form` y `upload`.
 - `rudy_attack.sh`: script de ejemplo que usa `slowhttptest` para simular conexiones lentas y ataques R.U.D.Y.
 
----
 
-## Endpoints relevantes
+## Endpoints
 - `GET /` — página principal (`home.html`).
 - `GET|POST /form/` — `vulnerable_form` (formulario con campo de texto grande, `@csrf_exempt`).
 - `GET|POST /upload/` — `upload_endpoint` (acepta subidas y lee el archivo en memoria).
 
----
 
 ## Requisitos
 - Python 3.10+ (o versión compatible).
@@ -28,13 +26,12 @@ El repositorio contiene:
   - `slowhttptest` (para simular conexiones lentas).
   - `netstat` o `ss` para monitoreo de conexiones.
 
----
 
 ## Instalación y ejecución (entorno local)
 ```bash
 # clona el repo y ve al directorio del proyecto
-git clone <repo>
-cd <repo>
+git clone https://github.com/wh01s17/rudy_vulnerable
+cd rudy_vulnerable
 
 # crea y activa un virtualenv
 python -m venv .venv
@@ -46,21 +43,18 @@ pip install django
 # aplica migraciones básicas
 python manage.py migrate
 
-# ejecuta el servidor de desarrollo (no usar en producción)
+# ejecuta el servidor
 python manage.py runserver 0.0.0.0:8000
 ```
 
----
 
 ## Uso de rudy_attack.sh (demostración)
 
-# dar permisos al script
 ```bash
+# dar permisos al script
 chmod +x rudy_attack.sh
-```
 
 # ejemplo: atacar el servidor local durante 600 segundos (10 minutos)
-```bash
 ./rudy_attack.sh http://127.0.0.1:8000 600
 ```
 
