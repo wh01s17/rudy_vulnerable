@@ -1,6 +1,6 @@
 # R.U.D.Y. Vulnerable Django App
 
-> **Advertencia legal y ética**  
+> **⚠️ ¡ESTE PROYECTO ES INTENCIONALMENTE INSEGURO!**  
 > Esta aplicación es **solamente** para fines educativos y de pruebas en entornos controlados y con autorización explícita. No uses este proyecto contra sistemas que no sean de tu propiedad o sin permiso expreso. El autor no se hace responsable del uso indebido.
 
 ---
@@ -13,7 +13,6 @@ El repositorio contiene:
 - `rudy_attack.sh`: script de ejemplo que usa `slowhttptest` para simular conexiones lentas y ataques R.U.D.Y.
 
 ---
-
 
 ## Endpoints relevantes
 - `GET /` — página principal (`home.html`).
