@@ -21,9 +21,9 @@ El repositorio contiene:
 
 
 ## Requisitos
-- Python 3.10+ (o versión compatible).
+- Python 3.10+.
 - Django.
-- Para las pruebas (opcional, sólo en entorno controlado):
+- Para las pruebas:
   - `slowhttptest` (para simular conexiones lentas).
   - `netstat` o `ss` para monitoreo de conexiones.
 
