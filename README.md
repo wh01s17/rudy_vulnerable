@@ -16,7 +16,7 @@ El repositorio contiene:
 ## Endpoints
 - `GET /` — página principal (`home.html`).
 - `GET|POST /form/` — `vulnerable_form` (formulario con campo de texto grande, `@csrf_exempt`).
-- `GET|POST /upload/` — `upload_endpoint` (acepta subidas y lee el archivo en memoria).
+- `GET|POST /upload/` — `upload_form` (acepta subidas y lee el archivo en memoria).
 
 
 ## Requisitos
@@ -48,7 +48,7 @@ python manage.py runserver 0.0.0.0:8000
 ```
 
 
-## Uso de rudy_attack.sh (demostración)
+## Uso de rudy_attack.sh
 
 ```bash
 # dar permisos al script
